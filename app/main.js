@@ -1,5 +1,5 @@
 (function openHostedNuvioTv() {
-  var hostedAppUrl = "http://192.168.0.92:9090/";
+  var hostedAppUrl = "http://192.168.0.92:9090/?version=0.3.0";
   var tvInput = window.tizen && window.tizen.tvinputdevice;
   var launchUrl = buildFreshHostedUrl();
   var hasAttemptedLaunch = false;
