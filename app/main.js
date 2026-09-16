@@ -1,5 +1,5 @@
 (function openHostedNuvioTv() {
-  var hostedAppUrl = "https://web.nuvioapp.space/";
+  var hostedAppUrl = "http://192.168.0.92:9090/";
   var tvInput = window.tizen && window.tizen.tvinputdevice;
   var launchUrl = buildFreshHostedUrl();
   var hasAttemptedLaunch = false;
@@ -60,7 +60,7 @@
     } catch (_) {}
 
     window.setTimeout(function retryWithHref() {
-      if (String(window.location.href || "").indexOf("web.nuvioapp.space") === -1) {
+      if (String(window.location.href || "").indexOf("192.168.0.92:9090") === -1) {
         try {
           window.location.href = launchUrl;
         } catch (_) {}
@@ -68,7 +68,7 @@
     }, 150);
 
     window.setTimeout(function retryWithAnchor() {
-      if (String(window.location.href || "").indexOf("web.nuvioapp.space") === -1) {
+      if (String(window.location.href || "").indexOf("192.168.0.92:9090") === -1) {
         openFallbackLink();
       }
     }, 400);
